@@ -29,14 +29,14 @@ class KateMenuSidebarItem extends Polymer.Element {
     };
   }
   itemClicked( item ) {
+    this.set('status', true);
     this.dispatchEvent( new CustomEvent( 'item-selected', {
       detail: {
         values: {
           id: this.identifier,
           title: this.title
         }
-      },
-      bubbles: true
+      }
     }))
   }
 }
