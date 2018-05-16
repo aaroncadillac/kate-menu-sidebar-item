@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>kate-menu-sidebar-item demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../iron-icons/iron-icons.html">
+    <link rel="import" href="../kate-menu-sidebar-item.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+        .container {
+          position: relative;
+          width: 50px;
+          height: 300px;
+          background-color: #0080ff;
+          --kate-menu-sidebar-item-color: #e5e5e5;
+        }
+        .return-value: {
+          white-space: pre;
+        }
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic kate-menu-sidebar-item demo</h3>
+      <demo-snippet>
+        <template>
+          <div class="container">
+            <kate-menu-sidebar-item
+              icon="home"
+              tooltip="home"
+              identifier="1"
+              >
+            </kate-menu-sidebar-item>
+            <kate-menu-sidebar-item
+              icon="work"
+              tooltip="work"
+              identifier="2"
+            >
+            </kate-menu-sidebar-item>
+            <kate-menu-sidebar-item
+              icon="android"
+              tooltip="android"
+              identifier="3"
+            >
+            </kate-menu-sidebar-item>
+          </div>
+        </template>
+      </demo-snippet>
+      <p id="return-value"></p>
+    </div>
+    <script>
+      var itemsSelected
+      var rv = document.querySelector('#return-value')
+      document.addEventListener('item-selected', function(e) {
+        rv.innerHTML += `Item Selected: detail.value: ${JSON.stringify(e.detail.values)} <br>`;
+      })
+    </script>
+  </body>
+</html>

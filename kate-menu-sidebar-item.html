@@ -1,0 +1,18 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="kate-menu-sidebar-item-style.html">
+
+<dom-module id="kate-menu-sidebar-item">
+  <template>
+    <style include="kate-menu-sidebar-item-style"></style>
+    <div class="item-container" title="[[tooltip]]" on-click="itemClicked">
+      <div class="icon-container">
+        <iron-icon icon="[[icon]]"></iron-icon>
+      </div>
+      <div class="title-container">
+        <span>[[title]]</span>
+      </div>
+    </div>
+  </template>
+
+  <script src="kate-menu-sidebar-item.js"></script>
+</dom-module>

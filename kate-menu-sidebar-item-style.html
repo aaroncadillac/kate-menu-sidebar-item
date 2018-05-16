@@ -1,0 +1,27 @@
+<dom-module id="kate-menu-sidebar-item-style">
+  <template>
+    <style>
+      .item-container {
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        height: var(--ams-item-height, auto);
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 4px;
+        transition: background-color 0.4s;
+        cursor: pointer;
+      }
+      .item-container:hover {
+        background-color: rgba(255,255,255,0.15);
+      }
+      .icon-container, .title-container {
+        text-align: center;
+        color: var(--kate-menu-sidebar-item-color, #252525);
+      }
+      .title-container {
+        font-size: 0.8em;
+      }
+    </style>
+  </template>
+</dom-module>
