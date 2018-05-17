@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="kate-menu-sidebar-item-style.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
 
 <dom-module id="kate-menu-sidebar-item">
   <template>
@@ -12,6 +13,9 @@
         <div class="title-container">
           <span>[[title]]</span>
         </div>
+      </template>
+      <template is="dom-if" if="[[ripple]]">
+        <paper-ripple></paper-ripple>
       </template>
     </div>
   </template>
