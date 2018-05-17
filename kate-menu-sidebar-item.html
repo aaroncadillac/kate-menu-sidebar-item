@@ -8,9 +8,11 @@
       <div class="icon-container">
         <iron-icon icon="[[icon]]"></iron-icon>
       </div>
-      <div class="title-container">
-        <span>[[title]]</span>
-      </div>
+      <template is="dom-if" if="title">
+        <div class="title-container">
+          <span>[[title]]</span>
+        </div>
+      </template>
     </div>
   </template>
 
