@@ -29,6 +29,10 @@ class KateMenuSidebarItem extends Polymer.Element {
       ripple: {
         type: Boolean,
         value: false
+      },
+      index: {
+        type: String,
+        value: ''
       }
     };
   }

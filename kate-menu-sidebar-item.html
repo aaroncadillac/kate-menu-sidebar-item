@@ -5,7 +5,7 @@
 <dom-module id="kate-menu-sidebar-item">
   <template>
     <style include="kate-menu-sidebar-item-style"></style>
-    <div class="item-container" title="[[tooltip]]" on-click="itemClicked">
+    <div class="item-container" title="[[tooltip]]" on-click="itemClicked" style$="@apply --menu-sidebar-item-style-[[index]]">
       <div class="icon-container">
         <iron-icon icon="[[icon]]"></iron-icon>
       </div>
