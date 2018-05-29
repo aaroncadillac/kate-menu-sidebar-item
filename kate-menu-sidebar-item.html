@@ -5,7 +5,7 @@
 <dom-module id="kate-menu-sidebar-item">
   <template>
     <style include="kate-menu-sidebar-item-style"></style>
-    <div class="item-container" title="[[tooltip]]" on-click="itemClicked" style$="@apply --menu-sidebar-item-style-[[index]]">
+    <div class="item-container" title="[[tooltip]]" on-click="itemClicked" id$="kate-msi-[[index]]">
       <div class="icon-container">
         <iron-icon icon="[[icon]]"></iron-icon>
       </div>
@@ -16,6 +16,13 @@
       </template>
       <template is="dom-if" if="[[ripple]]">
         <paper-ripple></paper-ripple>
+      </template>
+      <template is="dom-if" if="[[tooltip]]">
+        <paper-tooltip
+          for="kate-msi-[[index]]"
+          position="right"
+          offset="2">
+        </paper-tooltip>
       </template>
     </div>
   </template>
