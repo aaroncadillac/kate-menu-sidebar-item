@@ -1,6 +1,13 @@
 <dom-module id="kate-menu-sidebar-item-style">
   <template>
     <style>
+      :host {
+        --paper-tooltip-delay-in: 0;
+        --paper-tooltip-duration-in: 100;
+        --paper-tooltip: {
+          width: 100px;
+        };
+      };
       .item-container {
         display: flex;
         flex-flow: column;
