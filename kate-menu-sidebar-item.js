@@ -33,7 +33,11 @@ class KateMenuSidebarItem extends Polymer.Element {
       index: {
         type: String,
         value: ''
-      }
+      },
+      tooltipPosition:{
+        type: String,
+        value: "right"
+      } 
     };
   }
   itemClicked( item ) {
