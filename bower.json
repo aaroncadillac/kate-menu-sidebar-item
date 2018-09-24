@@ -1,5 +1,6 @@
 {
   "name": "kate-menu-sidebar-item",
+  "version": "1.0.0",
   "description": "element for kate-menu-sidebar",
   "main": "kate-menu-sidebar-item.html",
   "dependencies": {
